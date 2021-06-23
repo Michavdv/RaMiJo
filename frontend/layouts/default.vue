@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="container-page">
     <Header class="main-header" />
     <Nuxt />
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -16,6 +16,23 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+
+  // Main flex-container class
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .container-page {
+    display: flex;
+    flex-direction: column;
+
+    .main {
+      flex: 1;
+    }
+  }
 }
 
 *,
