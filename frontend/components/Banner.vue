@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="flex-container flex-container-quote">
+  <div class="flex-container flex-container-quote">
+    <div>
       <h1>Welkom bij RaMiJo</h1>
       <h6>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -13,20 +13,12 @@
         nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque
         error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis
         modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias
-        error harum maxime adipisci amet laborum. Perspiciatis minima nesciunt
-        dolorem! Officiis iure rerum voluptates a cumque velit quibusdam sed
-        amet tempora. Sit laborum ab, eius fugit doloribus tenetur fugiat,
-        temporibus enim commodi iusto libero magni deleniti quod quam
-        consequuntur! Commodi minima excepturi repudiandae velit hic maxime
-        doloremque. Quaerat provident commodi consectetur veniam similique ad
-        earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
-        fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores
-        labore suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto
-        ab laudantium modi minima sunt esse temporibus sint culpa, recusandae
-        aliquam numquam totam ratione voluptas quod exercitationem fuga.
-        Possimus quis earum veniam quasi aliquam eligendi, placeat qui corporis!
+        error harum maxime adipisci amet laborum.
       </h6>
     </div>
+    <a id="arrow-down" href="#arrow-down" class="arrow-down">
+      <LazySvgDownArrow />
+    </a>
   </div>
 </template>
 
@@ -39,10 +31,9 @@
   background-size: cover;
   background-attachment: fixed;
   padding: 0 40px;
-  margin-top: 100px;
   text-align: center;
   flex-direction: column;
-  min-height: 650px;
+  min-height: 100vh;
 
   // The title of the banner
   h1 {
@@ -57,6 +48,12 @@
     margin-bottom: 30px;
     max-width: 1000px;
   }
+
+  .arrow-down {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+  }
 }
 
 // Changes the font size of the title and content of the banner
@@ -66,8 +63,18 @@
     background-attachment: unset;
 
     h1 {
-      font-size: 30px;
+      font-size: 35px;
       margin: 25px 10px 25px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .flex-container-quote {
+    min-height: 700px;
+    margin-top: 100px;
+    .arrow-down {
+      display: none;
     }
   }
 }

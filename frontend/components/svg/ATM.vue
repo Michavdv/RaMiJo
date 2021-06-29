@@ -41,6 +41,10 @@
 </template>
 
 <style lang="scss">
+.ATMmachine {
+  width: 450px;
+}
+
 .ATMmachine:hover {
   .Card {
     animation: swipe 3s ease-in-out forwards;
@@ -73,6 +77,13 @@
   56%,
   100% {
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .ATMmachine {
+    width: 350px;
+    height: 350px;
   }
 }
 </style>
